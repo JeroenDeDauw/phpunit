@@ -20,12 +20,12 @@ class PHPUnit_Framework_Constraint_JsonMatches_ErrorMessageProvider
     /**
      * Translates JSON error to a human readable string.
      *
-     * @param string $error
+     * @param int $error
      * @param string $prefix
      *
      * @return string
      */
-    public static function determineJsonError($error, $prefix = '')
+    public static function determineJsonError($error, string $prefix = '')
     {
         switch ($error) {
             case JSON_ERROR_NONE:
@@ -52,7 +52,7 @@ class PHPUnit_Framework_Constraint_JsonMatches_ErrorMessageProvider
      *
      * @return string
      */
-    public static function translateTypeToPrefix($type)
+    public static function translateTypeToPrefix(string $type)
     {
         switch (strtolower($type)) {
             case 'expected':
